@@ -1,0 +1,7 @@
+· What are memory leaks and how we handle?
+
+A memory leak occurs when your app retains memory that it no longer needs, preventing the garbage collector from reclaiming it. Over time, this can lead to:
+
+Increased memory usage
+App slowdowns
+OutOfMemoryError crashes

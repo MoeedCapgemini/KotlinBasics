@@ -1,0 +1,39 @@
+Barclays interview question - 
+Apart from common question
+ 
+1) Constructor chaining
+2) Dalvik runtime machine
+3) Android Runtime
+4) The lifecycle of a ViewModel
+5) launcher mode with new intent data
+6) How Any class work in koltin
+7) how super keyword referene to parent class, same for this keyword
+8) How to manage Product flavour resources and screen 
+Hi team,
+Barclays L1 interview question - 
+ 
+Some Java question like  polymorphism, 
+how to access abstract class and abstract function ,  same with final class and function.
+default v/s protected -with example
+with v/s apply - with example
+ 
+Refied types - with example
+two way data binding - with example
+mediator v/s mutable live data
+kotlin flows? -with example
+state and shared  flows? - with example and use case
+flow operators? - 
+viewmodel and its internal working
+how to launch a coroutine - 
+launch v/s async?
+runblocking?
+suspend functions? and it internal working
+supervisor scope? 
+dependency injection? with it annotation example
+@Inject, @Component? 
+room database?
+mockk? 
+viewmodel >> isEmailValid() - Test case for emailvalid in viewmodel class
+ 
+alert dialog unit test >> 
+facade pattern , Builder des patrn , Factory dp

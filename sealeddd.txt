@@ -1,0 +1,10 @@
+sealed class NavRoute(val route: String) {
+    object SelectRole : NavRoute("select_role")
+    object AdminHome : NavRoute("admin_home")
+    object OwnerHome : NavRoute("owner_home")
+    object NurseryList : NavRoute("nursery_list")
+    object Nurseries : NavRoute("nurseries")
+    object OrderList : NavRoute("order_list")
+    object UserList : NavRoute("user_list")
+    object SalesList : NavRoute("sales_list")
+}

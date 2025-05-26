@@ -1,0 +1,20 @@
+Firebase Crashlytics primarily focuses on crashes and fatal issues in your app but it can also detect non-fatal issues 
+(such as exceptions or errors) that you can log and track manually
+
+Automatically Detected: Firebase Crashlytics is designed to automatically detect and report crashes in your app.
+ Crashes occur when your app encounters an unhandled exception, causing it to terminate unexpectedly.
+
+Enable Crashlytics in Your Application: Firebase Crashlytics will automatically be initialized when you integrate it, 
+but you can also log custom exceptions or non-fatal errors explicitly in your app:
+
+Detailed Crash Reports: When a crash occurs, Crashlytics will log a detailed report, including stack traces, 
+device info (OS version, model, etc.), app version, and even the number of users affected. 
+This helps developers understand why and where the crash happened.
+
+2. Non-Fatal Issues (Custom Errors and Exceptions):
+   Manually Logged Issues: While Firebase Crashlytics doesn't automatically track every issue
+   (like warnings or handled exceptions), 
+   it allows you to log custom non-fatal issues (exceptions or custom messages) to help you monitor app behavior.
+
+Custom Event Logging: You can use Firebase Crashlytics to track non-crash issues, 
+                      like specific exceptions, handled errors, or abnormal behavior that doesn't result in a crash.

@@ -1,0 +1,35 @@
+val viewModel by viewModels<MyViewModel>()
+
+val viewModel: MealsCategoriesViewModel = viewModel()->
+Usage: It is used within a Composable function 
+and automatically provides access to the ViewModel tied to the Activity or Fragment lifecycle. 
+function handles the creation and retrieval of the ViewModel and is much simpler than using ViewModelProvider 
+or other approaches.
+This is a part of the lifecycle-viewmodel-compose library.
+
+
+
+val viewModel: MyViewModel by viewModels()
+val viewModel: MainViewModel by viewModels()
+ viewModels() (Used in Activity or Fragment)
+
+viewModel() is for Compose UI and directly returns the ViewModel in a type-safe manner.
+viewModels() is for traditional Android UI (Activity or Fragment) and lazily initializes the ViewModel, scoped to the lifecycle of the Activity or Fragment.
+
+
+Feature	viewModel()	viewModels()
+Context	Used in Jetpack Compose (inside @Composable functions).	Used in Activity or Fragment (traditional Android).
+Return Type	Directly returns the ViewModel.	Returns ViewModelLazy to lazily load the ViewModel.
+Library	Part of lifecycle-viewmodel-compose.	Part of lifecycle-viewmodel-ktx.
+Usage Scope	Scoped to the Composable's lifecycle.	Scoped to the Activity or Fragment's lifecycle.
+Lifecycle Awareness	Tied to the Activity or Fragment lifecycle, within Jetpack Compose.	Tied to the Activity or Fragment lifecycle, outside Compose.
+
+
+
+
+review above 
+
+
+Practivce sealed and enum alll cases
+cover a new topic android security
+do one coding question

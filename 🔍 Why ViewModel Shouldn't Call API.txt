@@ -1,0 +1,32 @@
+🔍 Why ViewModel Shouldn't Call APIs in onPause() or onStop()
+These lifecycle methods indicate that the UI is no longer in the foreground:
+
+onPause() → The UI is partially visible (e.g., a dialog appears).
+onStop() → The UI is completely hidden (e.g., user navigates away).
+Calling APIs during these states is usually not recommended because:
+
+User is not interacting with the UI, so the data might not be needed immediately.
+Network and battery usage should be minimized when the app is not active.
+LiveData observers may be inactive, so updates might not be delivered to the UI.
+
+
+When you press the Home button during an API call in an Android app, here's what typically happens:
+
+📱 1. Activity Lifecycle Changes
+Pressing the Home button causes the current Activity to go into the background.
+This triggers the following lifecycle methods:
+onPause()
+then onStop()
+🔄 2. What Happens to the API Call?
+If the API call is made from the ViewModel using viewModelScope.launch { ... }, then:
+
+✅ The API call continues in the background.
+❌ It is not cancelled automatically, because viewModelScope is tied to the ViewModel's lifecycle, not the Activity's.
+So unless the app is killed or the ViewModel is cleared (e.g., due to low memory or process death), the API call will complete normally.
+
+📦 3. What Happens to the Result?
+If the API call completes while the app is in the background:
+The LiveData is updated.
+But the UI will not receive the update immediately, because the Activity/Fragment is not in an active state.
+When the user returns to the app, the observer becomes active again, and:
+✅ The latest LiveData value is delivered to the UI.

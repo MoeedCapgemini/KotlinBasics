@@ -1,0 +1,31 @@
+🔁 OnConflictStrategy.REPLACE
+What it does: Deletes the old row and inserts the new one.
+Use when: You want to overwrite existing data.
+✅ Keeps the new data, but beware: it removes the old row, which may affect foreign key relationships.
+
+🚫 OnConflictStrategy.ABORT (Default)
+What it does: Cancels the operation and throws an exception.
+Use when: You want to prevent accidental overwrites.
+❌ No data is inserted or updated if there's a conflict.
+
+⛔ OnConflictStrategy.FAIL
+What it does: Similar to ABORT, but fails the specific statement without rolling back the entire transaction.
+Use when: You want to stop the current operation but keep the transaction alive.
+
+🔙 OnConflictStrategy.IGNORE
+What it does: Ignores the new data if there's a conflict.
+Use when: You want to keep the existing data and skip the new one silently.
+✅ No exception is thrown.
+
+🔄 OnConflictStrategy.ROLLBACK
+What it does: Rolls back the entire transaction if a conflict occurs.
+Use when: You want to undo all changes in a transaction if any conflict happens.
+⚠️ Rarely used in simple apps.
+
+
+Strategy	Keeps Old Data	Keeps New Data	Throws Error	Notes
+REPLACE	❌	✅	❌	Deletes old row, inserts new one
+ABORT	✅	❌	✅	Default, cancels operation
+FAIL	✅	❌	✅	Fails statement, not whole txn
+IGNORE	✅	❌	❌	Skips insert silently
+ROLLBACK	✅	❌	✅

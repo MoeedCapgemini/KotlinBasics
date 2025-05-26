@@ -1,0 +1,31 @@
+Kotlin Coroutines Interview Questions:
+• What are Coroutines in Kotlin?
+• What is a suspend function?
+• Suspending vs Blocking
+• What is runBlocking?
+• What is the meaning of structured concurrency in Kotlin Coroutines?
+• Scopes in Kotlin Coroutines
+• What is Coroutine Context?
+• Launch vs Async
+• Thread . sleep() vs delay()
+• How do you combine multiple coroutine results?
+• What is a Job in Coroutines?
+• How to Implement Debounce Using Coroutines?
+• yield in Kotlin Coroutines
+• Code snippet demonstrating how to run two coroutines in series and parallel.
+• Error Handling in Coroutines
+• IO vs Default Dispatchers
+How live data internally works
+Mediator LiveData
+kotlin flows
+ Coroutines Exception, Timeout, WithContext
+tget ()
+Pair and Triplet in Kotlin
+
+fun String.validate(validationFunc: (String) -> Boolean): Boolean {
+    return validationFunc(this)
+}
+ 
+val input = "example input"
+val isInputValid = input.validate { input -> input.isNotEmpty() }
+ 

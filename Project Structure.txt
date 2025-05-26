@@ -1,0 +1,17 @@
+com.example.newsapp
+│
+├── ui
+│   ├── screen
+│   │   ├── HomeScreen.kt
+│   │   ├── NewsDetailScreen.kt
+│   └── viewmodel
+│       └── NewsDetailViewModel.kt
+│
+├── data
+│   ├── model
+│   │   └── NewsArticle.kt
+│   └── repository
+│       └── NewsRepository.kt
+│
+└── utils
+    └── NetworkUtils.kt

@@ -1,0 +1,48 @@
+4. ACRA (Application Crash Reports for Android)
+Platform: Android only
+Highlights:
+Open-source and highly customizable
+Can send reports to your own server, Google Sheets, etc.
+No external service dependency
+Best for: Developers who want full control or offline crash reporting
+
+3. Choose a Report Sender
+ACRA supports multiple report senders:
+
+Email (simple, no server needed)
+HTTP (send to your own server)
+Google Sheets
+Firebase (with custom integration)
+For example, to send reports via email:
+
+
+
+@AcraCore(buildConfigClass = BuildConfig.class)
+@AcraMailSender(mailTo = "your_email@example.com") // or use other senders
+public class MyApplication extends Application {
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        // The following line triggers the initialization of ACRA
+        ACRA.init(this);
+    }
+}
+
+
+
+@AcraMailSender(mailTo = "your_email@example.com",
+                reportAsFile = true,
+                reportFileName = "crash.txt",
+                resSubject = R.string.crash_report_email_subject,
+                resBody = R.string.crash_report_email_body)
+
+
+
+@AcraCore(reportContent = {
+    ReportField.APP_VERSION_CODE,
+    ReportField.APP_VERSION_NAME,
+    ReportField.ANDROID_VERSION,
+    ReportField.PHONE_MODEL,
+    ReportField.STACK_TRACE,
+    ReportField.LOGCAT
+})

@@ -1,0 +1,164 @@
+Microsoft Windows [Version 10.0.22631.5039]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git fetch
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git branch
+* main
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git checkout master
+branch 'master' set up to track 'origin/master'.
+Switched to a new branch 'master'
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git pull origin master
+From https://github.com/CGVinodTarle/MyNursery
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git checkout dev
+branch 'dev' set up to track 'origin/dev'.
+Switched to a new branch 'dev'
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git branch
+* dev
+  main
+  master
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>
+
+__________________________________________________________*******************************_______________________________________
+From Android Studio
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git branch owner_moeed_dashboard_screen
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git branch
+* dev
+  main
+  master
+  owner_moeed_dashboard_screen
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git checkout owner_moeed_dashboard_screen
+Switched to branch 'owner_moeed_dashboard_screen'
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git pull origin master
+From https://github.com/CGVinodTarle/MyNursery
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git status
+On branch owner_moeed_dashboard_screen
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   owner/src/main/java/com/my_nursery/owner/OwnerScreen.kt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .idea/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git add .
+warning: in the working copy of '.idea/inspectionProfiles/Project_Default.xml', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git status
+On branch owner_moeed_dashboard_screen
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/.gitignore
+        new file:   .idea/compiler.xml
+        new file:   .idea/deploymentTargetSelector.xml
+        new file:   .idea/gradle.xml
+        new file:   .idea/inspectionProfiles/Project_Default.xml
+        new file:   .idea/kotlinc.xml
+        new file:   .idea/migrations.xml
+        new file:   .idea/misc.xml
+        new file:   .idea/runConfigurations.xml
+        new file:   .idea/vcs.xml
+        modified:   owner/src/main/java/com/my_nursery/owner/OwnerScreen.kt
+
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git commit -m "test commit"
+[owner_moeed_dashboard_screen 4dc80a0] test commit
+ Committer: amoeed <abdul.moeed@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 11 files changed, 139 insertions(+), 1 deletion(-)
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/compiler.xml
+ create mode 100644 .idea/deploymentTargetSelector.xml
+ create mode 100644 .idea/gradle.xml
+ create mode 100644 .idea/inspectionProfiles/Project_Default.xml
+ create mode 100644 .idea/kotlinc.xml
+ create mode 100644 .idea/migrations.xml
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .idea/runConfigurations.xml
+ create mode 100644 .idea/vcs.xml
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git push
+fatal: The current branch owner_moeed_dashboard_screen has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin owner_moeed_dashboard_screen
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git push
+fatal: The current branch owner_moeed_dashboard_screen has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin owner_moeed_dashboard_screen
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git push origin owner_moeed_dashboard_screen
+Enumerating objects: 31, done.
+Counting objects: 100% (31/31), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (22/22), 3.13 KiB | 246.00 KiB/s, done.
+Total 22 (delta 4), reused 8 (delta 1), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'owner_moeed_dashboard_screen' on GitHub by visiting:
+remote:      https://github.com/CGVinodTarle/MyNursery/pull/new/owner_moeed_dashboard_screen
+remote:
+To https://github.com/CGVinodTarle/MyNursery.git
+ * [new branch]      owner_moeed_dashboard_screen -> owner_moeed_dashboard_screen
+PS C:\Users\amoeed\AndroidStudioProjects\MyNursery> git push origin owner_moeed_dashboard_screen
+_________________________________________________________________________________________________________________
+Microsoft Windows [Version 10.0.22631.5039]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git pull origin owner_moeed_dashboard_screen
+From https://github.com/CGVinodTarle/MyNursery
+ * branch            owner_moeed_dashboard_screen -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git branch
+* main
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git checkout owner_moeed_dashboard_screen
+branch 'owner_moeed_dashboard_screen' set up to track 'origin/owner_moeed_dashboard_screen'.
+Switched to a new branch 'owner_moeed_dashboard_screen'
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git branch
+  main
+* owner_moeed_dashboard_screen
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>git pull origin owner_moeed_dashboard_screen
+From https://github.com/CGVinodTarle/MyNursery
+ * branch            owner_moeed_dashboard_screen -> FETCH_HEAD
+Already up to date.
+
+C:\Users\amoeed\AndroidStudioProjects\MyNursery>
+
+git reset --hard HEAD     go to your own repo
+

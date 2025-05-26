@@ -1,0 +1,16 @@
+HSBC Interview questions
+ 
+1. Companion Object
+2. Top level functions
+3. Object class
+4. Companion Object vs Singleton in depth with example program
+5. Sealed Class
+6. Scope functions
+7. infix Function, inline function
+8. Coroutines, coroutine context, dispatchers in depth with examples
+9. Flow, shared flow
+10. Mutable livedata, livedata vs flow
+11. Clean Architecture
+12. Solid principles
+13. Memory leaks prevention
+14. intents, notifications

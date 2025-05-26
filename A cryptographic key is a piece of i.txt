@@ -1,0 +1,67 @@
+A cryptographic key is a piece of information—usually a string of bits—that is used in cryptographic algorithms to:
+
+Encrypt data (turn it into unreadable form)
+Decrypt data (turn it back into readable form)
+Sign data (prove who sent it)
+Verify signatures (check authenticity)
+There are two main types:
+
+Symmetric keys – The same key is used for both encryption and decryption.
+Asymmetric keys – A pair of keys is used: a public key (shared with others) and a private key (kept secret).
+
+Types of Cryptographic Keys
+Symmetric Keys – Same key is used for encryption and decryption (e.g., AES).
+Asymmetric Keys – A key pair is used: one public and one private (e.g., RSA, EC).
+
+Symmetric Key (AES-256) – 256-bit key (32 bytes):
+Asymmetric Key Pair (RSA)
+
+The Android Keystore provides a container to hold cryptographic keys in a secure manner. Keys stored in the Keystore are non-exportable, meaning they cannot be extracted from the device.
+
+Common Use Cases
+Encrypting sensitive data (e.g., user credentials)
+Signing data (e.g., JWT tokens)
+Verifying digital signatures
+Secure communication (e.g., TLS)
+
+The Android Keystore is a secure system provided by Android that allows apps to store cryptographic keys in a way that makes them hard to extract, even if the device is compromised.
+
+ Why Use Keystore?
+Security: Keys are stored in a secure hardware-backed area (if available).
+Isolation: Apps can’t access each other’s keys.
+No manual key management: Android handles key storage and protection.
+
+
+🔒 Real-World Use Cases
+Securely encrypt sensitive data (e.g., passwords, tokens).
+Implement biometric authentication (e.g., fingerprint unlock).
+Protect app secrets without storing them in plain text.
+
+Use Keystore when you need full control over encryption, signing, or working with files or custom data.
+Use EncryptedSharedPreferences when you want a simple and secure way to store small key-value data.
+
+
+
+1. What is Android Keystore and why is it used?
+Answer:
+Android Keystore is a system that allows you to securely generate, store, and use cryptographic keys. It ensures that keys are stored in a secure container and are not accessible outside the Keystore.
+
+Use Case: Encrypting sensitive data like passwords, tokens, or using biometric authentication.
+
+What is the difference between symmetric and asymmetric encryption in Keystore?
+Answer:
+
+Symmetric: Same key for encryption and decryption (e.g., AES).
+Asymmetric: Public key encrypts, private key decrypts (e.g., RSA).
+Use Case:
+
+Use AES for fast, local encryption.
+Use RSA for secure key exchange or digital signatures.
+
+
+What encryption does EncryptedSharedPreferences use?
+Answer:
+
+Key Encryption: AES-256 SIV
+Value Encryption: AES-256 GCM
+Uses MasterKey stored in Android Keystore.
